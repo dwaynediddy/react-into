@@ -1,12 +1,17 @@
 import React from "react"
 import Greeting from "./Greeting"
+import "./App.scss"
 
-export default () => {
+export default (): JSX.Element => {
+    const styles: React.CSSProperties = {
+        color: "blue"
+    }
     return (
-        <>
-            <h1>HeY!</h1>
+        <div className="container">
+            <h1 style={styles}>Hello!</h1>
+            <p>Testing!</p>
             <Greeting />
             <Greeting />
-        </>
+        </div>
     )
 }
